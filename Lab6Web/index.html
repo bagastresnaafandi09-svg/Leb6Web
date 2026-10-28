@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum DOM dan Event Handling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">PRAKTIKUM PEMROGRAMAN WEB · PERTEMUAN 7</p>
+      <h1>JavaScript DOM &amp; Event Handling</h1>
+      <p>Latihan manipulasi DOM, event, validasi form, dan daftar tugas.</p>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <section class="card">
+      <h2>1. Mengubah Teks dengan DOM</h2>
+      <h3 id="judul">Latihan DOM</h3>
+      <p id="pesan">Belum ada tindakan.</p>
+      <button id="tombolAksi" type="button">Klik Saya</button>
+    </section>
+
+    <section class="card">
+      <h2>2. Mengubah Kelas dan Gaya</h2>
+      <p id="teksGaya">Klik tombol untuk mengubah tampilan paragraf ini.</p>
+      <button id="tombolGaya" type="button">Ubah Gaya</button>
+    </section>
+
+    <section class="card">
+      <h2>3. Penghitung Karakter</h2>
+      <label for="namaInput">Nama (maksimal 40 karakter)</label>
+      <input type="text" id="namaInput" maxlength="40" placeholder="Ketik nama di sini">
+      <p>Jumlah karakter: <strong id="jumlahKarakter">0</strong>/40</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Form Pendaftaran Workshop</h2>
+      <form id="formPendaftaran" novalidate>
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" name="nama" type="text" autocomplete="name" placeholder="Minimal 3 karakter">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com">
+
+        <label for="usia">Usia</label>
+        <input id="usia" name="usia" type="number" min="17" max="100" placeholder="17–100">
+
+        <label for="sesi">Pilih sesi workshop</label>
+        <select id="sesi" name="sesi">
+          <option value="">-- Pilih sesi --</option>
+          <option value="Pagi (09.00–11.00)">Pagi (09.00–11.00)</option>
+          <option value="Siang (13.00–15.00)">Siang (13.00–15.00)</option>
+          <option value="Sore (15.30–17.30)">Sore (15.30–17.30)</option>
+        </select>
+        <p class="hint" id="sesiTerpilih">Sesi belum dipilih.</p>
+
+        <button type="submit">Daftar Workshop</button>
+        <button type="reset" class="secondary">Reset Form</button>
+      </form>
+      <p id="pesanForm" class="notice" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>5. Daftar Tugas (To-do List)</h2>
+      <label for="inputTugas">Tugas baru</label>
+      <div class="task-entry">
+        <input id="inputTugas" type="text" placeholder="Contoh: Mengerjakan laporan">
+        <button id="tambahTugas" type="button">Tambah</button>
+      </div>
+      <p id="pesanTugas" class="hint" aria-live="polite"></p>
+      <ul id="daftarTugas" class="task-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>6. Tampilkan / Sembunyikan Paragraf</h2>
+      <p id="paragrafToggle">DOM memungkinkan JavaScript mengubah isi dan tampilan halaman secara dinamis.</p>
+      <button id="tombolToggle" type="button">Sembunyikan Paragraf</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Praktikum JavaScript DOM dan Event Handling · HTML, CSS, JavaScript</div>
+  </footer>
+</body>
+</html>
